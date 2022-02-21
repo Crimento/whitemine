@@ -1,0 +1,39 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@inertiajs/inertia": "^0.10.0",
+        "@inertiajs/inertia-vue3": "^0.5.1",
+        "@inertiajs/progress": "^0.2.6",
+        "@tailwindcss/forms": "^0.4.0",
+        "@vue/compiler-sfc": "^3.0.5",
+        "autoprefixer": "^10.4.2",
+        "axios": "^0.25",
+        "eslint": "^8.9.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-vue": "^8.4.1",
+        "lodash": "^4.17.19",
+        "postcss": "^8.4.6",
+        "postcss-import": "^14.0.1",
+        "prettier": "^2.5.1",
+        "tailwindcss": "^3.0.22",
+        "vite": "^2.8.1",
+        "vite-plugin-eslint": "^1.3.0",
+        "vite-plugin-laravel": "^0.2.0-beta.5",
+        "vue": "^3.0.5",
+        "vue-loader": "^16.1.2"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.3.0",
+        "@fortawesome/free-regular-svg-icons": "^6.0.0",
+        "@fortawesome/free-solid-svg-icons": "^6.0.0",
+        "@fortawesome/vue-fontawesome": "^3.0.0-5",
+        "@vitejs/plugin-vue": "^2.2.0",
+        "daisyui": "^2.0.9",
+        "vue-cookie-next": "^1.3.0",
+        "vuex": "^4.0.2"
+    }
+}

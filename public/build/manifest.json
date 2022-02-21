@@ -1,0 +1,47 @@
+{
+  "resources/scripts/main.js": {
+    "file": "assets/main.a91c2302.js",
+    "src": "resources/scripts/main.js",
+    "isEntry": true,
+    "imports": [
+      "_vendor.9bd34ee6.js"
+    ],
+    "dynamicImports": [
+      "resources/views/pages/home-page.vue",
+      "resources/views/pages/news-page.vue"
+    ],
+    "css": [
+      "assets/tailwind.74173442.css"
+    ]
+  },
+  "_vendor.9bd34ee6.js": {
+    "file": "assets/vendor.9bd34ee6.js"
+  },
+  "resources/views/pages/home-page.vue": {
+    "file": "assets/home-page.28ee632f.js",
+    "src": "resources/views/pages/home-page.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_main-layout.f05045f5.js",
+      "_vendor.9bd34ee6.js"
+    ]
+  },
+  "_main-layout.f05045f5.js": {
+    "file": "assets/main-layout.f05045f5.js",
+    "imports": [
+      "_vendor.9bd34ee6.js"
+    ],
+    "css": [
+      "assets/main-layout.871dc2da.css"
+    ]
+  },
+  "resources/views/pages/news-page.vue": {
+    "file": "assets/news-page.fb220413.js",
+    "src": "resources/views/pages/news-page.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_main-layout.f05045f5.js",
+      "_vendor.9bd34ee6.js"
+    ]
+  }
+}
