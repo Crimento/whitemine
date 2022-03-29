@@ -1,14 +1,14 @@
 <template>
   <div
-    class="bg-primary main-sidebar flex flex-col overflow-hidden"
+    class="bg-base-300 text-base-content main-sidebar flex flex-col overflow-hidden"
     :class="sidebarStatus ? 'sidebar-expanded' : 'sidebar-collapsed'"
   >
     <sidebar-link
       v-if="$page.props.auth.user"
       :config="{
         icon: 'circle-user',
-        text: '',
-        link: '/',
+        text: $page.props.auth.user.username,
+        link: '/profile',
       }"
     />
     <sidebar-link
@@ -16,7 +16,7 @@
       :config="{
         icon: 'circle-user',
         text: 'Регистрация/Вход',
-        link: '/',
+        link: '/login',
       }"
     >
     </sidebar-link>
@@ -71,11 +71,15 @@ export default {
       window.addEventListener('resize', this.onResize);
       this.onResize();
     });
+    this.$store.commit('forceSidebar', this.$bNormalizer(this.$cookie.getCookie('sidebar_status')) ?? null);
   },
   computed: {
     sidebarStatus() {
       return this.$store.getters.sidebarStatus;
     },
+  },
+  watch: {
+    sidebarStatus(value) {},
   },
   methods: {
     onResize() {
@@ -88,6 +92,7 @@ export default {
       }
     },
     forceClick() {
+      this.$cookie.setCookie('sidebar_status', !this.sidebarStatus);
       this.$store.commit('forceSidebar', !this.sidebarStatus);
     },
     enableDarkMode() {
@@ -102,7 +107,7 @@ export default {
 
 <style>
 .main-sidebar {
-  transition: width 0.75s;
+  transition: width 0.33s;
 }
 .sidebar-collapsed {
   width: 50px;

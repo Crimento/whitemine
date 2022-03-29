@@ -7,7 +7,7 @@
 		@vite
 		@routes
 	</head>
-	<body class="antialiased bg-slate-200 dark:bg-slate-900">
+	<body class="antialiased">
 		@inertia
 	</body>
 </html>

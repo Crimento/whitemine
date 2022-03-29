@@ -1,7 +1,7 @@
 <template>
   <main-skeleton>
     <main-sidebar />
-    <div class="grow">
+    <div class="grow bg-neutral">
       <slot />
     </div>
   </main-skeleton>

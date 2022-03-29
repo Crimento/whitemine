@@ -23,8 +23,8 @@ Route::get('/news', function () {
     return Inertia::render('news-page');
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/profile', function () {
+    return Inertia::render('profile-page');
+})->middleware(['auth', 'verified'])->name('profile');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

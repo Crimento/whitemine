@@ -1,12 +1,18 @@
 module.exports = {
-  darkMode: 'class',
   content: [
     './resources/**/*.blade.php',
     './resources/**/*.js',
     './resources/**/*.vue',
   ],
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        128: '32rem',
+      },
+    },
   },
   plugins: [require('daisyui')],
+  daisyui: {
+    themes: ['light', 'dark'],
+  },
 };

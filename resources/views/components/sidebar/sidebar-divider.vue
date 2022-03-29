@@ -1,5 +1,5 @@
 <template>
-  <hr class="my-2" />
+  <hr class="my-2 border-1 border-base-content" />
 </template>
 
 <script setup></script>
