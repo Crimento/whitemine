@@ -107,12 +107,14 @@ export default {
 
 <style>
 .main-sidebar {
-  transition: width 0.33s;
+  transition: min-width 0.5s;
 }
 .sidebar-collapsed {
   width: 50px;
+  min-width: 50px;
 }
 .sidebar-expanded {
   width: 400px;
+  min-width: min(400px, calc(100vw));
 }
 </style>

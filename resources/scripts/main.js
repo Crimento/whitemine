@@ -12,15 +12,31 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {
   faChevronLeft,
   faChevronRight,
+  faTimes,
   faHome,
   faNewspaper,
   faCircleQuestion,
   faCircleUser,
+  faCircleCheck,
   faSun,
   faMoon,
   faCircleXmark,
+  faTriangleExclamation,
 } from '@fortawesome/free-solid-svg-icons';
-library.add(faChevronLeft, faChevronRight, faHome, faNewspaper, faCircleQuestion, faCircleUser, faSun, faMoon, faCircleXmark);
+library.add(
+  faChevronLeft,
+  faChevronRight,
+  faTimes,
+  faHome,
+  faNewspaper,
+  faCircleQuestion,
+  faCircleUser,
+  faCircleCheck,
+  faSun,
+  faMoon,
+  faCircleXmark,
+  faTriangleExclamation
+);
 
 //vuex
 import { store } from './store.js';

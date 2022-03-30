@@ -6,12 +6,14 @@
       </div>
       <div class="grow flex flex-col md:flex-row">
         <div class="w-full md:w-2/5 h-3/5 md:h-full p-3">
-          <div class="h-full card bg-base-200">1</div>
+          <div class="h-full card bg-base-200">
+            {{ $page.props }}
+          </div>
         </div>
         <div class="w-full md:w-3/5 h-2/5 md:h-full flex flex-col p-3">
           <div class="grow card bg-base-200">2</div>
           <form @submit.prevent="logout">
-            <button class="btn btn-block btn-error mt-3">Выйти из аккаунта</button>
+            <button class="btn btn-block btn-error mt-3">Выйти</button>
           </form>
         </div>
       </div>
