@@ -1,7 +1,7 @@
 <template>
   <div v-if="visible" class="p-3 flex">
     <div class="grow">
-      <div v-for="msg in messages" class="alert" :class="'alert-' + msg.type">
+      <div v-for="msg in messages" class="alert shadow-lg" :class="msg.class">
         <div class="flex w-full">
           <font-awesome-icon :icon="['fas', msg.icon]" />
           <span>{{ msg.text }}</span>
@@ -41,6 +41,7 @@ export default {
         if (value != null) {
           messages.push({
             type: key,
+            class: 'alert-' + key,
             text: value,
             icon: msgTypeToIcon(key),
           });
