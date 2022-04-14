@@ -25,6 +25,8 @@ return new class extends Migration
             $table->char('accessToken', 32)->nullable();
             $table->string('serverID')->nullable();
             $table->bigInteger('hwidId')->nullable();
+            $table->boolean('skin_set')->default(false);
+            $table->boolean('cloak_set')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });

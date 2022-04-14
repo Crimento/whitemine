@@ -1,10 +1,12 @@
 <template>
   <main-skeleton>
     <main-sidebar />
-    <div class="grow bg-neutral">
+    <div class="grow bg-base-100">
       <div class="flex flex-col h-full">
         <flash-messages></flash-messages>
-        <slot class="grow" />
+        <div class="grow overflow-scroll">
+          <slot />
+        </div>
       </div>
     </div>
   </main-skeleton>

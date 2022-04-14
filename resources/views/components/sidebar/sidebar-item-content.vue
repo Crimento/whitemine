@@ -6,9 +6,8 @@
     <img
       v-if="config.imgLink != null"
       style="width: 50px"
-      class="rounded-lg py-1"
       :class="config.sidebarStatus ? 'p-1' : ''"
-      src="http://pm1.narvii.com/7616/bc3b22a89815985dc74b830a01ad331c0d3e9f86r1-768-768v2_uhq.jpg"
+      :src="config.imgLink"
       alt=""
     />
     <font-awesome-icon

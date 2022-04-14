@@ -1,12 +1,14 @@
 <template>
   <div
-    class="bg-base-300 text-base-content main-sidebar flex flex-col overflow-hidden"
+    class="bg-neutral text-neutral-content main-sidebar flex flex-col overflow-hidden"
     :class="sidebarStatus ? 'sidebar-expanded' : 'sidebar-collapsed'"
   >
     <sidebar-link
       v-if="$page.props.auth.user"
       :config="{
-        icon: 'circle-user',
+        imgLink: $page.props.auth.user.skin_set
+          ? '/storage/skins/' + $page.props.auth.user.username + '.head.png?' + Date.now()
+          : '/storage/defaulthead.png',
         text: $page.props.auth.user.username,
         link: '/profile',
       }"
@@ -107,7 +109,7 @@ export default {
 
 <style>
 .main-sidebar {
-  transition: min-width 0.5s;
+  transition: width 0.5s ease, min-width 0.5s ease;
 }
 .sidebar-collapsed {
   width: 50px;

@@ -22,7 +22,9 @@ class User extends Authenticatable
         'email',
         'password',
         'is_admin',
-        'uuid'
+        'uuid',
+        'skin_set',
+        'cloak_set'
     ];
 
     /**
@@ -43,5 +45,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'is_admin' => 'boolean',
+        'skin_set' => 'boolean',
+        'cloak_set' => 'boolean',
     ];
 }

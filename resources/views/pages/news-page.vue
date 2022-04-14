@@ -1,6 +1,6 @@
 <template>
   <main-layout>
-    <div class="card bg-base-100 m-3">
+    <div class="card bg-base-300 m-3">
       <div class="card-body">
         <h2 class="card-title text-primary">Temp header</h2>
         <p class="indent-8">Pseudo text</p>

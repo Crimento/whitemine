@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SkinController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -17,7 +18,7 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('home-page');
-});
+})->name('home');
 
 Route::get('/news', function () {
     return Inertia::render('news-page');
@@ -26,5 +27,7 @@ Route::get('/news', function () {
 Route::get('/profile', function () {
     return Inertia::render('profile-page');
 })->middleware(['auth', 'verified'])->name('profile');
+
+Route::post('/skinupload', [SkinController::class, 'uploadSkin'])->middleware(['auth', 'verified'])->name('skinupload');;
 
 require __DIR__ . '/auth.php';

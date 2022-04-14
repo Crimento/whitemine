@@ -1,8 +1,8 @@
 <template>
   <main-layout>
-    <div class="hero min-h-screen">
-      <div class="text-center hero-content">
-        <div class="flex flex-col">
+    <div class="hero h-full">
+      <div class="text-center hero-content bg-base-300 card">
+        <div class="flex flex-col p-3">
           <h1 class="text-3xl md:text-5xl font-bold">Мой сервер</h1>
           <p class="m-3">Майнкрафт это моя жизнь!</p>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
