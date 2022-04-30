@@ -56,6 +56,9 @@ export default {
         if (value > 0) {
           this.visible = true;
         }
+        if (value == 0) {
+          this.visible = false;
+        }
       },
       immediate: true,
     },

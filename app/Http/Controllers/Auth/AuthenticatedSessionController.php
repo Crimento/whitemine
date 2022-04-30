@@ -54,6 +54,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/')->with('success', 'Вы успешно вышли из системы!');;
+        return redirect(route('home'))->with('success', 'Вы успешно вышли из системы!');
     }
 }

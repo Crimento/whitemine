@@ -7,10 +7,10 @@
       v-if="$page.props.auth.user"
       :config="{
         imgLink: $page.props.auth.user.skin_set
-          ? '/storage/skins/' + $page.props.auth.user.username + '.head.png?' + Date.now()
+          ? '/storage/skins/' + $page.props.auth.user.username + '.head.png?' + $page.props.auth.user.updated_at
           : '/storage/defaulthead.png',
         text: $page.props.auth.user.username,
-        link: '/profile',
+        link: route('profile'),
       }"
     />
     <sidebar-link
@@ -18,7 +18,7 @@
       :config="{
         icon: 'circle-user',
         text: 'Регистрация/Вход',
-        link: '/login',
+        link: route('profile'),
       }"
     >
     </sidebar-link>
@@ -27,17 +27,26 @@
       :config="{
         icon: 'home',
         text: 'Домой',
-        link: '/',
+        link: route('home'),
       }"
     />
     <sidebar-link
       :config="{
         icon: 'newspaper',
         text: 'Новости',
-        link: '/news',
+        link: route('news'),
       }"
     />
     <div class="grow"></div>
+    <sidebar-divider v-if="$page.props.auth.user && $page.props.auth.user.is_admin"></sidebar-divider>
+    <sidebar-link
+      v-if="$page.props.auth.user && $page.props.auth.user.is_admin"
+      :config="{
+        icon: 'list',
+        text: 'Управление новостями',
+        link: route('news.admin'),
+      }"
+    />
     <sidebar-divider></sidebar-divider>
     <sidebar-button
       :config="{

@@ -1,7 +1,7 @@
 <template>
-  <div v-if="Object.keys(form.errors).length !== 0" class="alert alert-error shadow-lg">
-    <ul class="list-disc">
-      <li v-for="error in form.errors" class="mx-3">{{ error }}</li>
+  <div v-if="Object.keys(form.errors).length !== 0" class="alert alert-error shadow-lg mb-3">
+    <ul class="flex flex-col w-full list-disc px-3">
+      <li v-for="error in form.errors" class="justify-self-center w-full">{{ error }}</li>
     </ul>
   </div>
 </template>

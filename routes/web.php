@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SkinController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -20,14 +21,23 @@ Route::get('/', function () {
     return Inertia::render('home-page');
 })->name('home');
 
-Route::get('/news', function () {
-    return Inertia::render('news-page');
+Route::get('/news', [NewsController::class, 'index'])->name('news');
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/profile', function () {
+        return Inertia::render('profile-page');
+    })->name('profile');
+    Route::post('/skinupload', [SkinController::class, 'uploadSkin'])->name('skinupload');
+
+    //admin stuff
+    Route::middleware('admin')->group(function () {
+        //news
+        Route::get('/admin/news', [NewsController::class, 'adminIndex'])->name('news.admin');
+        Route::post('/admin/news/create', [NewsController::class, 'create'])->name('news.create');
+        Route::post('/admin/news/edit', [NewsController::class, 'update'])->name('news.update');
+        Route::post('/admin/news/delete', [NewsController::class, 'delete'])->name('news.delete');
+    });
 });
 
-Route::get('/profile', function () {
-    return Inertia::render('profile-page');
-})->middleware(['auth', 'verified'])->name('profile');
-
-Route::post('/skinupload', [SkinController::class, 'uploadSkin'])->middleware(['auth', 'verified'])->name('skinupload');;
 
 require __DIR__ . '/auth.php';

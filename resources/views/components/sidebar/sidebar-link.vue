@@ -1,5 +1,6 @@
 <template>
-  <Link :href="config.link ?? '#'" class="btn btn-ghost p-1">
+  <Link :href="config.link ?? '#'" class="btn btn-ghost p-1"
+  :class="{'btn-active' : $page.url === config.link}">
     <sidebar-item-content :config="config"></sidebar-item-content>
   </Link>
 </template>

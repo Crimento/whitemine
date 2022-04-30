@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\SkinController;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
+use App\Rules\Recaptcha;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -41,6 +42,7 @@ class RegisteredUserController extends Controller
             'username' => 'required|string|alpha_num|max:16|unique:users',
             'email' => 'required|string|email|max:255',
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'captcha_token'  => [new Recaptcha],
         ]);
 
         $user = User::create([
@@ -54,6 +56,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        return redirect(RouteServiceProvider::HOME)->with('success', 'Успешная регистрация!');
     }
 }

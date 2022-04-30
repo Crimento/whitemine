@@ -11,7 +11,7 @@
               <img
                 :src="
                   $page.props.auth.user.skin_set
-                    ? '/storage/skins/' + this.$page.props.auth.user.username + '.preview.png?' + Date.now()
+                    ? '/storage/skins/' + $page.props.auth.user.username + '.preview.png?' + $page.props.auth.user.username
                     : '/storage/defaultpreview.png'
                 "
                 alt=""
@@ -59,7 +59,6 @@ import mainLayout from '../layouts/main-layout.vue';
 import { useForm } from '@inertiajs/inertia-vue3';
 import fileInput from '../components/file-input.vue';
 import FormErrors from '../components/auth/form-errors.vue';
-import { inject } from 'vue';
 
 const skinForm = useForm({
   skin: null,

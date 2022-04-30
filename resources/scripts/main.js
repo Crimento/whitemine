@@ -2,11 +2,12 @@ import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/inertia-vue3';
 import { importPageComponent } from '@/scripts/vite/import-page-component';
 import { VueCookieNext } from 'vue-cookie-next';
+import { VueReCaptcha } from 'vue-recaptcha-v3';
 import { DateTime } from 'luxon';
+import VSwitch from '@lmiller1990/v-switch';
 
 import '../css/tailwind.css';
 
-//fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {
@@ -22,6 +23,8 @@ import {
   faMoon,
   faCircleXmark,
   faTriangleExclamation,
+  faList,
+  faPenToSquare,
 } from '@fortawesome/free-solid-svg-icons';
 library.add(
   faChevronLeft,
@@ -35,7 +38,9 @@ library.add(
   faSun,
   faMoon,
   faCircleXmark,
-  faTriangleExclamation
+  faTriangleExclamation,
+  faList,
+  faPenToSquare
 );
 
 //vuex
@@ -58,6 +63,8 @@ createInertiaApp({
       .use(plugin)
       .use(store)
       .use(VueCookieNext)
+      .use(VueReCaptcha, { siteKey: props.initialPage.props.recaptcha_site_key })
+      .component('v-switch', VSwitch)
       .component('font-awesome-icon', FontAwesomeIcon)
       .mixin({ methods: { route: window.route } });
 

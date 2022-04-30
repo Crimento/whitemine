@@ -26,7 +26,7 @@
 
         <div class="card-actions my-3">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-            <Link :href="route('login')" class="btn btn-block btn-info">Войти?</Link>
+            <Link :href="route('login')" class="btn btn-block btn-info">Уже зарегистрированы?</Link>
             <button :class="{ 'loading btn-disabled opacity-25': form.processing }" class="btn btn-block btn-success" type="submit">
               Зарегистрироваться
             </button>
@@ -43,6 +43,9 @@ import FormTemplate from '../../components/auth/form-template.vue';
 import FormErrors from '../../components/auth/form-errors.vue';
 import { useForm } from '@inertiajs/inertia-vue3';
 import { Link } from '@inertiajs/inertia-vue3';
+import { useReCaptcha } from 'vue-recaptcha-v3';
+
+const { executeRecaptcha, recaptchaLoaded } = useReCaptcha();
 
 defineProps({
   canResetPassword: Boolean,
@@ -54,10 +57,13 @@ const form = useForm({
   password: null,
   password_confirmation: null,
   email: null,
+  captcha_token: null,
 });
 
-const submit = () => {
+const submit = async () => {
   form.clearErrors();
+  await recaptchaLoaded();
+  form.captcha_token = await executeRecaptcha('login');
   form.post(route('register'));
 };
 </script>

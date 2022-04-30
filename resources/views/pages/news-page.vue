@@ -1,24 +1,19 @@
 <template>
   <main-layout>
-    <div class="card bg-base-300 m-3">
-      <div class="card-body">
-        <h2 class="card-title text-primary">Temp header</h2>
-        <p class="indent-8">Pseudo text</p>
-        <div class="card-actions">
-          <span class="ml-auto">date</span>
-        </div>
-      </div>
+    <div class="flex flex-col min-h-full">
+      <news-item v-for="n in attrs.news.data" :news="n"></news-item>
+      <v-pagination :links="attrs.news.links"></v-pagination>
     </div>
   </main-layout>
 </template>
 
-<script>
+<script setup>
+import { useAttrs } from 'vue';
 import mainLayout from '../layouts/main-layout.vue';
-export default {
-  components: {
-    mainLayout,
-  },
-};
+import vPagination from '../components/v-pagination.vue';
+import newsItem from '../components/news/news-item.vue';
+import NewsItem from '../components/news/news-item.vue';
+const attrs = useAttrs();
 </script>
 
 <style></style>

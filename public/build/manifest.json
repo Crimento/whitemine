@@ -1,86 +1,111 @@
 {
   "resources/scripts/main.js": {
-    "file": "assets/main.a24edd20.js",
+    "file": "assets/main.32d597a0.js",
     "src": "resources/scripts/main.js",
     "isEntry": true,
-    "imports": [
-      "_vendor.7dbc2f53.js"
-    ],
     "dynamicImports": [
       "resources/views/pages/home-page.vue",
       "resources/views/pages/news-page.vue",
       "resources/views/pages/profile-page.vue",
+      "resources/views/pages/admin/admin-news-page.vue",
       "resources/views/pages/auth/login-page.vue",
       "resources/views/pages/auth/register-page.vue"
     ],
     "css": [
-      "assets/tailwind.c5364c7f.css"
+      "assets/tailwind.30163673.css"
     ]
   },
-  "_vendor.7dbc2f53.js": {
-    "file": "assets/vendor.7dbc2f53.js"
-  },
   "resources/views/pages/home-page.vue": {
-    "file": "assets/home-page.73f4dcaf.js",
+    "file": "assets/home-page.f97a266a.js",
     "src": "resources/views/pages/home-page.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_main-layout.9e2c20ed.js",
-      "_vendor.7dbc2f53.js"
+      "_main-layout.5d6e9a5b.js",
+      "resources/scripts/main.js"
     ]
   },
-  "_main-layout.9e2c20ed.js": {
-    "file": "assets/main-layout.9e2c20ed.js",
+  "_main-layout.5d6e9a5b.js": {
+    "file": "assets/main-layout.5d6e9a5b.js",
     "imports": [
-      "_vendor.7dbc2f53.js"
+      "resources/scripts/main.js"
     ],
     "css": [
-      "assets/main-layout.d7e348d8.css"
+      "assets/main-layout.63778d93.css"
     ]
   },
   "resources/views/pages/news-page.vue": {
-    "file": "assets/news-page.76c31489.js",
+    "file": "assets/news-page.2377fe37.js",
     "src": "resources/views/pages/news-page.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_main-layout.9e2c20ed.js",
-      "_vendor.7dbc2f53.js"
+      "_main-layout.5d6e9a5b.js",
+      "_v-pagination.9c0f1cb0.js",
+      "resources/scripts/main.js"
+    ]
+  },
+  "_v-pagination.9c0f1cb0.js": {
+    "file": "assets/v-pagination.9c0f1cb0.js",
+    "imports": [
+      "resources/scripts/main.js"
     ]
   },
   "resources/views/pages/profile-page.vue": {
-    "file": "assets/profile-page.07caf075.js",
+    "file": "assets/profile-page.87cc357d.js",
     "src": "resources/views/pages/profile-page.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_vendor.7dbc2f53.js",
-      "_main-layout.9e2c20ed.js"
+      "resources/scripts/main.js",
+      "_main-layout.5d6e9a5b.js",
+      "_form-errors.fc7bb0a9.js"
+    ],
+    "css": [
+      "assets/profile-page.e217fa3d.css"
+    ]
+  },
+  "_form-errors.fc7bb0a9.js": {
+    "file": "assets/form-errors.fc7bb0a9.js",
+    "imports": [
+      "resources/scripts/main.js"
+    ]
+  },
+  "resources/views/pages/admin/admin-news-page.vue": {
+    "file": "assets/admin-news-page.b3c8362d.js",
+    "src": "resources/views/pages/admin/admin-news-page.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_main-layout.5d6e9a5b.js",
+      "resources/scripts/main.js",
+      "_form-errors.fc7bb0a9.js",
+      "_v-pagination.9c0f1cb0.js"
     ]
   },
   "resources/views/pages/auth/login-page.vue": {
-    "file": "assets/login-page.b08571b2.js",
+    "file": "assets/login-page.512b5fd5.js",
     "src": "resources/views/pages/auth/login-page.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_vendor.7dbc2f53.js",
-      "_main-layout.9e2c20ed.js",
-      "_form-errors.277b5f91.js"
+      "resources/scripts/main.js",
+      "_main-layout.5d6e9a5b.js",
+      "_form-template.d2fada6a.js",
+      "_form-errors.fc7bb0a9.js"
     ]
   },
-  "_form-errors.277b5f91.js": {
-    "file": "assets/form-errors.277b5f91.js",
+  "_form-template.d2fada6a.js": {
+    "file": "assets/form-template.d2fada6a.js",
     "imports": [
-      "_main-layout.9e2c20ed.js",
-      "_vendor.7dbc2f53.js"
+      "_main-layout.5d6e9a5b.js",
+      "resources/scripts/main.js"
     ]
   },
   "resources/views/pages/auth/register-page.vue": {
-    "file": "assets/register-page.f56aee55.js",
+    "file": "assets/register-page.352ebf5e.js",
     "src": "resources/views/pages/auth/register-page.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_vendor.7dbc2f53.js",
-      "_main-layout.9e2c20ed.js",
-      "_form-errors.277b5f91.js"
+      "resources/scripts/main.js",
+      "_main-layout.5d6e9a5b.js",
+      "_form-template.d2fada6a.js",
+      "_form-errors.fc7bb0a9.js"
     ]
   }
 }
