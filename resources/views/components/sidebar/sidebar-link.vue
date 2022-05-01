@@ -1,6 +1,5 @@
 <template>
-  <Link :href="config.link ?? '#'" class="btn btn-ghost p-1"
-  :class="{'btn-active' : $page.url === config.link}">
+  <Link :href="route(config.link) ?? '#'" class="btn btn-ghost p-1" :class="{ 'btn-disabled': route().current() == config.link }">
     <sidebar-item-content :config="config"></sidebar-item-content>
   </Link>
 </template>

@@ -10,7 +10,7 @@
           ? '/storage/skins/' + $page.props.auth.user.username + '.head.png?' + $page.props.auth.user.updated_at
           : '/storage/defaulthead.png',
         text: $page.props.auth.user.username,
-        link: route('profile'),
+        link: 'profile',
       }"
     />
     <sidebar-link
@@ -18,7 +18,7 @@
       :config="{
         icon: 'circle-user',
         text: 'Регистрация/Вход',
-        link: route('profile'),
+        link: 'profile',
       }"
     >
     </sidebar-link>
@@ -27,14 +27,14 @@
       :config="{
         icon: 'home',
         text: 'Домой',
-        link: route('home'),
+        link: 'home',
       }"
     />
     <sidebar-link
       :config="{
         icon: 'newspaper',
         text: 'Новости',
-        link: route('news'),
+        link: 'news',
       }"
     />
     <div class="grow"></div>
@@ -44,7 +44,7 @@
       :config="{
         icon: 'list',
         text: 'Управление новостями',
-        link: route('news.admin'),
+        link: 'news.admin',
       }"
     />
     <sidebar-divider></sidebar-divider>

@@ -1,6 +1,11 @@
 {
+  "resources/css/tailwind.css": {
+    "file": "assets/tailwind.ebbddcdf.css",
+    "src": "resources/css/tailwind.css",
+    "isEntry": true
+  },
   "resources/scripts/main.js": {
-    "file": "assets/main.32d597a0.js",
+    "file": "assets/main.5f4535b2.js",
     "src": "resources/scripts/main.js",
     "isEntry": true,
     "dynamicImports": [
@@ -12,20 +17,23 @@
       "resources/views/pages/auth/register-page.vue"
     ],
     "css": [
-      "assets/tailwind.30163673.css"
+      "assets/main.5596159d.css"
     ]
   },
   "resources/views/pages/home-page.vue": {
-    "file": "assets/home-page.f97a266a.js",
+    "file": "assets/home-page.713ac574.js",
     "src": "resources/views/pages/home-page.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_main-layout.5d6e9a5b.js",
+      "_main-layout.312796dd.js",
       "resources/scripts/main.js"
+    ],
+    "css": [
+      "assets/home-page.99b2d8d3.css"
     ]
   },
-  "_main-layout.5d6e9a5b.js": {
-    "file": "assets/main-layout.5d6e9a5b.js",
+  "_main-layout.312796dd.js": {
+    "file": "assets/main-layout.312796dd.js",
     "imports": [
       "resources/scripts/main.js"
     ],
@@ -34,78 +42,78 @@
     ]
   },
   "resources/views/pages/news-page.vue": {
-    "file": "assets/news-page.2377fe37.js",
+    "file": "assets/news-page.8efec507.js",
     "src": "resources/views/pages/news-page.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_main-layout.5d6e9a5b.js",
-      "_v-pagination.9c0f1cb0.js",
+      "_main-layout.312796dd.js",
+      "_v-pagination.6c610fd8.js",
       "resources/scripts/main.js"
     ]
   },
-  "_v-pagination.9c0f1cb0.js": {
-    "file": "assets/v-pagination.9c0f1cb0.js",
+  "_v-pagination.6c610fd8.js": {
+    "file": "assets/v-pagination.6c610fd8.js",
     "imports": [
       "resources/scripts/main.js"
     ]
   },
   "resources/views/pages/profile-page.vue": {
-    "file": "assets/profile-page.87cc357d.js",
+    "file": "assets/profile-page.2539004f.js",
     "src": "resources/views/pages/profile-page.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/scripts/main.js",
-      "_main-layout.5d6e9a5b.js",
-      "_form-errors.fc7bb0a9.js"
+      "_main-layout.312796dd.js",
+      "_form-errors.c4af13a8.js"
     ],
     "css": [
       "assets/profile-page.e217fa3d.css"
     ]
   },
-  "_form-errors.fc7bb0a9.js": {
-    "file": "assets/form-errors.fc7bb0a9.js",
+  "_form-errors.c4af13a8.js": {
+    "file": "assets/form-errors.c4af13a8.js",
     "imports": [
       "resources/scripts/main.js"
     ]
   },
   "resources/views/pages/admin/admin-news-page.vue": {
-    "file": "assets/admin-news-page.b3c8362d.js",
+    "file": "assets/admin-news-page.bcc728f6.js",
     "src": "resources/views/pages/admin/admin-news-page.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_main-layout.5d6e9a5b.js",
+      "_main-layout.312796dd.js",
       "resources/scripts/main.js",
-      "_form-errors.fc7bb0a9.js",
-      "_v-pagination.9c0f1cb0.js"
+      "_form-errors.c4af13a8.js",
+      "_v-pagination.6c610fd8.js"
     ]
   },
   "resources/views/pages/auth/login-page.vue": {
-    "file": "assets/login-page.512b5fd5.js",
+    "file": "assets/login-page.7d268a73.js",
     "src": "resources/views/pages/auth/login-page.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/scripts/main.js",
-      "_main-layout.5d6e9a5b.js",
-      "_form-template.d2fada6a.js",
-      "_form-errors.fc7bb0a9.js"
+      "_main-layout.312796dd.js",
+      "_form-template.5243b05a.js",
+      "_form-errors.c4af13a8.js"
     ]
   },
-  "_form-template.d2fada6a.js": {
-    "file": "assets/form-template.d2fada6a.js",
+  "_form-template.5243b05a.js": {
+    "file": "assets/form-template.5243b05a.js",
     "imports": [
-      "_main-layout.5d6e9a5b.js",
+      "_main-layout.312796dd.js",
       "resources/scripts/main.js"
     ]
   },
   "resources/views/pages/auth/register-page.vue": {
-    "file": "assets/register-page.352ebf5e.js",
+    "file": "assets/register-page.bf40070e.js",
     "src": "resources/views/pages/auth/register-page.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/scripts/main.js",
-      "_main-layout.5d6e9a5b.js",
-      "_form-template.d2fada6a.js",
-      "_form-errors.fc7bb0a9.js"
+      "_main-layout.312796dd.js",
+      "_form-template.5243b05a.js",
+      "_form-errors.c4af13a8.js"
     ]
   }
 }
