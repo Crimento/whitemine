@@ -14,7 +14,7 @@
               <font-awesome-icon class="pr-3" size="2x" :icon="['fas', 'circle-user']" />
               Личный кабинет
             </Link>
-            <a href="http://" target="_blank" rel="noopener noreferrer" class="btn btn-info">
+            <a href="https://discord.gg/rHaPnQ7" target="_blank" rel="noopener noreferrer" class="btn btn-info">
               <font-awesome-icon class="pr-3" size="2x" :icon="['fab', 'discord']" />
               Discord
             </a>
