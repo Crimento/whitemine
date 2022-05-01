@@ -37,6 +37,13 @@
         link: 'news',
       }"
     />
+    <sidebar-link
+      :config="{
+        icon: 'download',
+        text: 'Скачать',
+        link: 'download',
+      }"
+    />
     <div class="grow"></div>
     <sidebar-divider v-if="$page.props.auth.user && $page.props.auth.user.is_admin"></sidebar-divider>
     <sidebar-link

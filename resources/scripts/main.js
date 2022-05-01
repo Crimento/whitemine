@@ -26,7 +26,9 @@ import {
   faTriangleExclamation,
   faList,
   faPenToSquare,
+  faDownload,
 } from '@fortawesome/free-solid-svg-icons';
+import { faDiscord } from '@fortawesome/free-brands-svg-icons';
 library.add(
   faChevronLeft,
   faChevronRight,
@@ -41,7 +43,9 @@ library.add(
   faCircleXmark,
   faTriangleExclamation,
   faList,
-  faPenToSquare
+  faPenToSquare,
+  faDiscord,
+  faDownload
 );
 
 //vuex

@@ -10,9 +10,18 @@
           />
           <p class="mb-3">Майнкрафт это моя жизнь!</p>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
-            <Link :href="route('profile')" class="btn btn-block btn-success">Личный кабинет</Link>
-            <button class="btn btn-primary">Скачать .jar</button>
-            <button class="btn btn-primary">Скачать .exe (x64)</button>
+            <Link :href="route('profile')" class="btn btn-block btn-success">
+              <font-awesome-icon class="pr-3" size="2x" :icon="['fas', 'circle-user']" />
+              Личный кабинет
+            </Link>
+            <a href="http://" target="_blank" rel="noopener noreferrer" class="btn btn-info">
+              <font-awesome-icon class="pr-3" size="2x" :icon="['fab', 'discord']" />
+              Discord
+            </a>
+            <Link :href="route('download')" class="btn btn-block btn-primary">
+              <font-awesome-icon class="pr-3" size="2x" :icon="['fas', 'download']" />
+              Скачать
+            </Link>
           </div>
         </div>
       </div>

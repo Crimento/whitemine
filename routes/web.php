@@ -23,6 +23,10 @@ Route::get('/', function () {
 
 Route::get('/news', [NewsController::class, 'index'])->name('news');
 
+Route::get('/download', function () {
+    return Inertia::render('download-page');
+})->name('download');
+
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/profile', function () {
         return Inertia::render('profile-page');
