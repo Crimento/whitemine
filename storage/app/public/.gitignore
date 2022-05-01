@@ -1,2 +1,7 @@
 *
+!cloaks/
+!skins/
+!defaulthead.png
+!defaultpreview.png
+!defaultskin.png
 !.gitignore
