@@ -18,7 +18,7 @@
       :config="{
         icon: 'circle-user',
         text: 'Регистрация/Вход',
-        link: 'profile',
+        link: 'login',
       }"
     >
     </sidebar-link>
