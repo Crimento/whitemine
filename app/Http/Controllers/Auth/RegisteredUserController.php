@@ -7,6 +7,7 @@ use App\Http\Controllers\SkinController;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use App\Rules\Recaptcha;
+use App\Rules\AsciiOnly;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -39,7 +40,7 @@ class RegisteredUserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'username' => 'required|string|alpha_num|max:16|unique:users',
+            'username' => ['required', 'string', 'max:16', 'unique:users', new AsciiOnly],
             'email' => 'required|string|email|max:255',
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'captcha_token'  => [new Recaptcha],
