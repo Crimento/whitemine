@@ -8,7 +8,13 @@
             :src="darkMode ? '/images/blackmine_title_white.svg' : '/images/blackmine_title.svg'"
             alt=""
           />
-          <p class="mb-3">Майнкрафт это моя жизнь!</p>
+          <div class="alert alert-warning p-1">
+            <span class="mx-auto">
+              Остановите войну в Украине!
+              <a class="link" href="https://ukraine-helpers.com/?lang=ru" target="_blank" rel="noopener noreferrer">Что я могу сделать?</a>
+            </span>
+          </div>
+          <p class="my-3">Майнкрафт это моя жизнь!</p>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
             <Link :href="route('profile')" class="btn btn-block btn-success">
               <font-awesome-icon class="pr-3" size="2x" :icon="['fas', 'circle-user']" />
